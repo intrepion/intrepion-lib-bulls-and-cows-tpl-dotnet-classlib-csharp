@@ -22,4 +22,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Intrepion.BullsAndCows.Library\Intrepion.BullsAndCows.Library.csproj" />
+  </ItemGroup>
+
 </Project>
