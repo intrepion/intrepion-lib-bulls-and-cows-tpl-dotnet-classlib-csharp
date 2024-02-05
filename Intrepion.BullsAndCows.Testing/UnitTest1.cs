@@ -1,4 +1,4 @@
-namespace Intrepion.BullsAndCows.Testing;
+﻿namespace Intrepion.BullsAndCows.Testing;
 
 public class UnitTest1
 {
