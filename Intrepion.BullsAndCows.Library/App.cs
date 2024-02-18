@@ -2,7 +2,7 @@
 
 namespace Intrepion.BullsAndCows.Library;
 
-public class App<T>
+public class App<T> where T : IComparable
 {
     public bool IsReadyForGuesses()
     {

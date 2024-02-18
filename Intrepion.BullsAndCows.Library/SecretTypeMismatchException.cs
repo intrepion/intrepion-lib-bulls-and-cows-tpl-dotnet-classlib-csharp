@@ -1,6 +1,4 @@
-﻿using System;
-
-public class SecretTypeMismatchException : Exception
+﻿public class SecretTypeMismatchException : Exception
 {
     public SecretTypeMismatchException()
     {

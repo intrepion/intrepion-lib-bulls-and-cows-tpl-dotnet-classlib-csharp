@@ -5,7 +5,7 @@ namespace Intrepion.BullsAndCows.Testing;
 public class ReadyForGuesses
 {
     [Fact]
-    public void NewApp_DoNothing_ReturnFalse()
+    public void NewIntApp_DoNothing_ReturnFalse()
     {
         var expected = false;
         var app = new App<int>();
