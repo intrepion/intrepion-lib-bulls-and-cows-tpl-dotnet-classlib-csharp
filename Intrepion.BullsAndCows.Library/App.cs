@@ -9,8 +9,13 @@ public class App<T> where T : IComparable
         return false;
     }
 
-    public void SetSecret(List<char> secret)
+    public void SetSecret(List<T> secret)
     {
-        throw new SecretTypeMismatchException();
+        throw new SecretSizeMismatchException();
+    }
+
+    public void SetSize(int size)
+    {
+        _ = size;
     }
 }
