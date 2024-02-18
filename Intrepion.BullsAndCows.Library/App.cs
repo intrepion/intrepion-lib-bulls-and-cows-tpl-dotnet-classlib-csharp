@@ -15,6 +15,11 @@ public class App<T> where T : IEquatable<T>
         return true;
     }
 
+    public void MakeGuess(List<T> guess)
+    {
+        throw new NotReadyForGuessesException();
+    }
+
     public void SetSecret(List<T> secret)
     {
         if (secret.Count != _size)
