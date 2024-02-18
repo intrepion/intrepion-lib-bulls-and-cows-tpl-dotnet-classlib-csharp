@@ -1,8 +1,6 @@
-﻿
+﻿namespace Intrepion.BullsAndCows.Library;
 
-namespace Intrepion.BullsAndCows.Library;
-
-public class App<T> where T : IComparable
+public class App<T> where T : IEquatable<T>
 {
     List<T>? _secret;
     int _size = -1;
