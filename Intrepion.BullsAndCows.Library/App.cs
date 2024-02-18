@@ -4,18 +4,31 @@ namespace Intrepion.BullsAndCows.Library;
 
 public class App<T> where T : IComparable
 {
+    List<T>? _secret;
+    int _size = -1;
+
     public bool IsReadyForGuesses()
     {
-        return false;
+        if (_secret == null)
+        {
+            return false;
+        }
+
+        return true;
     }
 
     public void SetSecret(List<T> secret)
     {
-        throw new SecretSizeMismatchException();
+        if (secret.Count != _size)
+        {
+            throw new SecretSizeMismatchException();
+        }
+
+        _secret = secret;
     }
 
     public void SetSize(int size)
     {
-        _ = size;
+        _size = size;
     }
 }
