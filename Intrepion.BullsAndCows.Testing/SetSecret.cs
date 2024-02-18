@@ -5,17 +5,16 @@ namespace Intrepion.BullsAndCows.Testing;
 public class SetSecret
 {
     [Fact]
-    public void NewIntApp_SetCharSecret_ThrowsSecretTypeMismatchException()
+    public void New1IntApp_Set2IntSecret_ThrowsSecretSizeMismatchException()
     {
         var app = new App<int>();
-        var secret = new List<char>
+        app.SetSize(1);
+        var secret = new List<int>
         {
-            'a',
-            'b',
-            'c',
-            'd',
+            1,
+            2,
         };
 
-        Assert.Throws<SecretTypeMismatchException>(() => app.SetSecret(secret));
+        Assert.Throws<SecretSizeMismatchException>(() => app.SetSecret(secret));
     }
 }
