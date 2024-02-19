@@ -15,6 +15,11 @@ public class App<T> where T : IEquatable<T>
         return true;
     }
 
+    public bool IsSecretFound()
+    {
+        return false;
+    }
+
     public void MakeGuess(List<T> guess)
     {
         throw new NotReadyForGuessesException();
