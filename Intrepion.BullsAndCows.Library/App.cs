@@ -22,7 +22,14 @@ public class App<T> where T : IEquatable<T>
 
     public void MakeGuess(List<T> guess)
     {
-        throw new NotReadyForGuessesException();
+        var _ = guess;
+
+        if (_size == -1)
+        {
+            throw new NotReadyForGuessesException();
+        }
+
+        throw new GuessSizeMismatchException();
     }
 
     public void SetSecret(List<T> secret)
