@@ -2,7 +2,7 @@
 
 namespace Intrepion.BullsAndCows.Testing;
 
-public class ReadyForGuesses
+public class IsReadyForGuesses
 {
     [Fact]
     public void New1IntApp_DoNothing_ReturnFalse()
