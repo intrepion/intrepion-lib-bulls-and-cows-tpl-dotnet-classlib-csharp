@@ -26,7 +26,7 @@ public class App<T> where T : IEquatable<T>
         return false;
     }
 
-    public void MakeGuess(List<T> guess)
+    public int[] MakeGuess(List<T> guess)
     {
         var _ = guess;
 
@@ -41,6 +41,12 @@ public class App<T> where T : IEquatable<T>
         }
 
         _doneWithGuesses = guess.SequenceEqual(_secret);
+
+        return
+        [
+            1,
+            0,
+        ];
     }
 
     public void SetSecret(List<T> secret)
