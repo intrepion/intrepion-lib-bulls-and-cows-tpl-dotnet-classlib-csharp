@@ -2,12 +2,13 @@
 
 public class App<T> where T : IEquatable<T>
 {
+    bool _doneWithGuesses = false;
     List<T>? _secret;
     int _size = -1;
 
     public bool IsDoneWithGuesses()
     {
-        return false;
+        return _doneWithGuesses;
     }
 
     public bool IsReadyForGuesses()
@@ -34,7 +35,12 @@ public class App<T> where T : IEquatable<T>
             throw new NotReadyForGuessesException();
         }
 
-        throw new GuessSizeMismatchException();
+        if (guess.Count != _size)
+        {
+            throw new GuessSizeMismatchException();
+        }
+
+        _doneWithGuesses = true;
     }
 
     public void SetSecret(List<T> secret)
