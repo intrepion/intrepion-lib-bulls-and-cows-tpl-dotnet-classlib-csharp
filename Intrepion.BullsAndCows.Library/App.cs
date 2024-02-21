@@ -5,6 +5,11 @@ public class App<T> where T : IEquatable<T>
     List<T>? _secret;
     int _size = -1;
 
+    public bool IsDoneWithGuesses()
+    {
+        return false;
+    }
+
     public bool IsReadyForGuesses()
     {
         if (_secret == null)
