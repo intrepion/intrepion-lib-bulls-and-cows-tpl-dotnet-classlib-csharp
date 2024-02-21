@@ -3,7 +3,7 @@
 public class App<T> where T : IEquatable<T>
 {
     bool _doneWithGuesses = false;
-    List<T>? _secret;
+    List<T> _secret = [];
     int _size = -1;
 
     public bool IsDoneWithGuesses()
@@ -13,7 +13,7 @@ public class App<T> where T : IEquatable<T>
 
     public bool IsReadyForGuesses()
     {
-        if (_secret == null)
+        if (_size == -1)
         {
             return false;
         }
@@ -40,7 +40,7 @@ public class App<T> where T : IEquatable<T>
             throw new GuessSizeMismatchException();
         }
 
-        _doneWithGuesses = true;
+        _doneWithGuesses = guess.SequenceEqual(_secret);
     }
 
     public void SetSecret(List<T> secret)
